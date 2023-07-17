@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB4舞蹈工作室</title>
+  <!--連接CSS樣式表-->
+  <link rel="stylesheet" href="./brand.css" />
+  <!--ICON CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+</head>
+
+<style>
+  div.filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: 1;
+
+  }
+
+  .slider {
+    min-height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    min-height: 70vh;
+    width: 100%;
+    padding: 0.6rem;
+
+  }
+
+  .slider-wrapper img {
+    min-height: 70vh;
+    min-width: 60vw;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+
+    /* position: relative; */
+  }
+</style>
+
+<script>
+  window.onload = function () {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const images = sliderWrapper.querySelectorAll('img');
+
+    let currentSlide = 0;
+    const slideWidth = images[0].clientWidth;
+    const maxOffset = slideWidth * (images.length - 1);
+    let currentOffset = 0;
+
+    function slideLeft() {
+      currentOffset -= 1;
+      if (currentOffset < -maxOffset) {
+        currentOffset = 0;
+      }
+      sliderWrapper.style.transform = `translateX(${currentOffset}px)`;
+      requestAnimationFrame(slideLeft);
+    }
+
+    requestAnimationFrame(slideLeft);
+
+  }
+</script>
+
+<body>
+  <header>
+    <section class="logo">
+      <img src="../img/圓形ＬＯＧＯ白底.png" alt="LAB4Logo" />
+      <h1><a class="active" href="../index.html">LAB4舞蹈工作室</a></h1>
+    </section>
+    <nav>
+      <ul>
+        <li>
+          <a href="../品牌故事/brand.html"><i class="fa-solid fa-store"></i> 品牌故事</a>
+        </li>
+        <li>
+          <a href="../最新消息/news.html"><i class="fa-regular fa-file"></i> 最新消息</a>
+        </li>
+        <li>
+          <a href="../index.html"><i class="fa-sharp fa-regular fa-gem"></i> 師資介紹</a>
+        </li>
+        <li>
+          <a href="../課程資訊/course.html"><i class="fa-sharp fa-solid fa-book"></i> 課程資訊</a>
+        </li>
+        <li>
+          <a href="../場館導覽/place.html"><i class="fa-brands fa-squarespace"></i> 場館導覽</a>
+        </li>
+        <!-- <li>
+          <a href="../會員登入/member.html"><i class="fa-sharp fa-solid fa-person fa-lg"></i> 會員登入</a>
+        </li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="slider">
+      <div class="filter"></div>
+      <div class="text">
+        <p>嘉義在地，最專業舞蹈的教學品牌！！</p><br>
+
+
+        <p>成立於2018年，由 P.Root、Achi、DJohn、Mak、Soda五位教學經驗豐富的老師一同創立，以四項街舞專業為核心理念
+
+          ｜肢體開發(Body Development)｜即興(Solo)｜編創(Choreography)｜表現力(Expressiveness)｜</p><br>
+
+
+
+        <p> ▻專業教學：兒童街舞｜基礎律動｜社團指導｜舞團培訓｜私人課程<br>
+          ▻演出合作：舞蹈編創｜風格養成｜外派師資｜商業演出｜藝術合作<br>
+          ▻課程皆為「預約制」！
+        </p>
+      </div>
+      <div class="slider-wrapper">
+
+        <img src="../img/brand3.jpg" />
+        <img src="../img/brand4.jpg" />
+        <img src="../img/brand1.jpg" />
+        <img src="../img/brand6.jpg">
+        <img src="../img/lab7.jpg" />
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <img src="../img/圓形LOGO(去背無字).png" alt="LAB4Logo" />
+
+    <section class="footer-logo">
+      <!-- <h3>LAB4街舞休閒館</h3> -->
+    </section>
+
+    <div class="link">
+      <a href=""><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-square-youtube fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-line fa-2xl" style="color: #ababab"></i></a>
+    </div>
+
+    <hr />
+
+    <div class="footer-info">
+      <p>| 營業時間：週一至週五 1pm - 10pm & 週六、週日 10am - 18pm |</p>
+      <p>| TEL：05-2765496 |　| E-mail：labfour4@gmail.com |</p>
+      <p>| ADD：600011嘉義市東區維新路72號2F |</p>
+      <p>
+        | 2F, No. 72, Weixin Rd., East Dist., Chiayi City 600011, Taiwan
+        (R.O.C.) |
+      </p>
+      <p>Copyright © 2018-2023 LAB4 Dance Studio</p>
+    </div>
+    <div class="arrowup">
+      <a href="#top"><i class="fa-solid fa-arrow-up fa-beat-fade fa-xl" style="color: #ababab">back</i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

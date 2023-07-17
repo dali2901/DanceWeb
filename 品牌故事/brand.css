@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body header {
+  background-color: rgb(58, 58, 58);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body header section.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2 1 400px;
+  align-items: center;
+  padding: 2rem;
+}
+body header section.logo a.active {
+  text-decoration: none;
+  color: azure;
+}
+body header section.logo h1 {
+  font-size: 2rem;
+  padding: 2.2rem;
+  color: azure;
+}
+body header section.logo img {
+  width: 4.2vw;
+  height: 4.2vw;
+}
+body header nav {
+  flex: 8 1 600px;
+  margin-right: 2.5rem;
+}
+body header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+body header nav li a {
+  color: azure;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.25s ease-in;
+}
+body header nav li a:hover {
+  color: rgb(192, 192, 192);
+  border-bottom: 2.5px f rgb(192, 192, 192);
+}
+body main {
+  width: 100%;
+  min-height: 70vh;
+  background-color: rgb(19, 19, 19);
+}
+body main div.text {
+  top: 25%;
+  position: absolute;
+  z-index: 100;
+  padding: 0.6rem;
+}
+body main p {
+  color: azure;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.6rem;
+}
+body footer {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(254, 253, 253);
+  background-color: rgb(58, 58, 58);
+  z-index: 0;
+  position: relative;
+}
+body footer img {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1.2rem;
+  position: absolute;
+  z-index: -1;
+}
+body footer section.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer section.footer-logo h3 {
+  font-size: 2.5rem;
+}
+body footer div.link {
+  margin-top: 1.4rem;
+}
+body footer div.link a {
+  cursor: pointer;
+}
+body footer div.link a i {
+  margin: 0rem 1rem;
+}
+body footer div.link a i:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in;
+}
+body footer div.footer-info {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+body footer div.footer-info p {
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+body footer div.arrowup {
+  position: absolute;
+  right: 2vw;
+  bottom: 1.5vw;
+}/*# sourceMappingURL=brand.css.map */

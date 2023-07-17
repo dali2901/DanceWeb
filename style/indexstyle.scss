@@ -1,0 +1,282 @@
+$themeColor: rgba(34, 34, 34, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  div#popup1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 8px;
+    border: 1px solid black;
+    // padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+
+    .vdo {
+      height: 50vh;
+      width: 40vw;
+      border-radius: 8px;
+      border: 5px solid rgb(255, 255, 255);
+    }
+  }
+
+  position: relative;
+
+  img.fixed-img {
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+  }
+
+  header {
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    section.logo {
+      // border: 5px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 2 1 400px;
+      align-items: center;
+      padding: 2rem;
+
+      a.active {
+        text-decoration: none;
+        color: azure;
+      }
+
+      h1 {
+        font-size: 2rem;
+        padding: 2.2rem;
+        color: azure;
+      }
+
+      img {
+        width: 4.2vw;
+        height: 4.2vw;
+      }
+    }
+
+    nav {
+      flex: 8 1 600px;
+      // border: 2px solid red;
+      margin-right: 2.5rem;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+        // padding: 1.2rem;
+      }
+
+      li {
+        a {
+          color: azure;
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: all 0.25s ease-in;
+
+          &:hover {
+            color: rgb(192, 192, 192);
+            border-bottom: 2.5px f rgb(192, 192, 192);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section.background-img {
+      // border: 5px solid red;
+      min-height: 70vh;
+      background-image: url("../img/lab\ 3.jpg");
+      background-size: cover;
+      background-position: center;
+      // transition: all 0.75s ease;
+      position: relative;
+      z-index: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div.filter {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        min-height: 70vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      h3 {
+        color: white;
+        font-size: 2.5rem;
+      }
+    }
+
+    section.teacher-info {
+      background-color: rgb(19, 19, 19);
+      padding: 2rem 1rem;
+
+      h3 {
+        text-align: center;
+        font-size: 3rem;
+        color: azure;
+      }
+
+      div.nav-circle {
+        // border: 5px solid rgb(72, 105, 5);
+        padding: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        div.circle {
+          // border: 5px solid rgb(172, 5, 116);
+          padding: 1rem;
+          margin: 0.8rem;
+          flex: 0 1 400px;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          transform: scale(1);
+
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease-in-out;
+          }
+
+          img {
+            width: 80%;
+            // height: 10vw;
+
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            padding: 0.5rem;
+
+            &:hover {
+              border: 4.5px solid rgb(214, 214, 214);
+            }
+          }
+        }
+
+        div.circle p {
+          color: azure;
+          margin: 0.8rem;
+        }
+      }
+    }
+
+    section.follow-img {
+      min-height: 70vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        color: azure;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(254, 253, 253);
+    background-color: rgb(58, 58, 58);
+    z-index: 0;
+    position: relative;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      margin-bottom: 1.2rem;
+      position: absolute;
+      z-index: -1;
+    }
+
+    section.footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    div.link {
+      margin-top: 1.4rem;
+
+      a {
+        cursor: pointer;
+
+        i {
+          margin: 0rem 1rem;
+
+          &:hover {
+            // border: 0.5px solid rgb(214, 214, 214);
+            transform: scale(1.3);
+            transition: transform 0.2s ease-in;
+          }
+        }
+      }
+    }
+
+    div.footer-info {
+      display: flex;
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin: 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    div.arrowup {
+      // position: relative;
+      // left: 700;
+      // border: 3px solid red;
+      position: absolute;
+      right: 2vw;
+      bottom: 1.5vw;
+    }
+  }
+}

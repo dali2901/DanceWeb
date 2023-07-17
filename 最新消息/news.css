@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body header {
+  background-color: rgb(58, 58, 58);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body header section.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2 1 400px;
+  align-items: center;
+  padding: 2rem;
+}
+body header section.logo a.active {
+  text-decoration: none;
+  color: azure;
+}
+body header section.logo h1 {
+  font-size: 2rem;
+  padding: 2.2rem;
+  color: azure;
+}
+body header section.logo img {
+  width: 4.2vw;
+  height: 4.2vw;
+}
+body header nav {
+  flex: 8 1 600px;
+  margin-right: 2.5rem;
+}
+body header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+body header nav li a {
+  color: azure;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.25s ease-in;
+}
+body header nav li a:hover {
+  color: rgb(192, 192, 192);
+  border-bottom: 2.5px f rgb(192, 192, 192);
+}
+body main {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(19, 19, 19);
+}
+body main section#main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+body main section#main div.row1 {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+body main section#main div.row1 div.video1 {
+  border: 2.5px solid rgb(239, 236, 236);
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+body main section#main div.row1 div.row1text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+}
+body main section#main div.row1 div.row1text p {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+body main section#main div.row2 {
+  display: flex;
+  margin-top: 1.2rem;
+  margin-right: 2rem;
+}
+body main section#main div.row2 div.video2 {
+  border: 2.5px solid rgb(239, 236, 236);
+  border-radius: 8px;
+  margin-left: 1.8rem;
+}
+body main section#main div.row2 div.row2text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  padding: 1.2rem;
+}
+body main section#main div.row2 div.row2text p {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+body footer {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(254, 253, 253);
+  background-color: rgb(58, 58, 58);
+  z-index: 0;
+  position: relative;
+}
+body footer img {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 1.2rem;
+  position: absolute;
+  z-index: -1;
+}
+body footer section.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body footer section.footer-logo h3 {
+  font-size: 2.5rem;
+}
+body footer div.link {
+  margin-top: 1.4rem;
+}
+body footer div.link a i {
+  margin: 0rem 1rem;
+}
+body footer div.link a i:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in;
+}
+body footer div.footer-info {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+body footer div.footer-info p {
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+body footer div.arrowup {
+  position: absolute;
+  right: 2vw;
+  bottom: 1.5vw;
+}/*# sourceMappingURL=news.css.map */

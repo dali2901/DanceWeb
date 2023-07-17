@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB4舞蹈工作室</title>
+  <!--連接CSS樣式表-->
+  <link rel="stylesheet" href="./course.css" />
+  <!--ICON CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+</head>
+
+<script>
+  window.onload = function () {
+    fetch("teacherinfo.json")
+      .then(function (response) {
+        return response.json();
+      })
+
+      .then(function (data) {
+        data.course_type.forEach(function (element) {
+          let table = `
+              <div class="table">
+                 <a href="${element["link"]}" >
+                 <div><img src="${element["photo"]}"></div>
+              <br>
+              <br>
+              <p>${element["type"]}</p>
+              <br>
+              <ul>
+              <li>老師:${element["name"]}</li>
+              <li>上課時間:${element["time"]}</li>
+              <li>課程費用:${element["tuition"]}</li>
+              </ul>
+              </a>
+          </div>
+          `;
+
+          document.getElementById("row1").innerHTML += table;
+        });
+      });
+  };
+
+    // ------------------------香均版本----------------------------------------
+
+    //    function f(json) {
+    //     let jsonObj = JSON.parse(json);
+    //
+    // jsonObj['coffeeshops'].forEach(function(coffeeshop) {
+
+    //   let card = `
+    //   <div class="card">
+    //     <a href="${coffeeshop['link']}" class="list">
+    //       <img src="${coffeeshop['image1']}" alt="book">
+    //             <br>
+    //             <br>
+    //             <h3>${coffeeshop['title']}</h3>
+    //             <li>營業時間:${coffeeshop['time']}</li>
+    //             <li>電話:${coffeeshop['tel']}</li>
+    //             <li>地址:${coffeeshop['address']}</li>
+    //             <li>低消:${coffeeshop['minimum order']}</li>
+    //             </a>
+    //         </div>
+    //         `;
+
+    //         main += card;
+    //       });
+
+    //       return main;
+    //     }
+    // ------------------------香均版本----------------------------------------
+</script>
+
+<body>
+  <header>
+    <section class="logo">
+      <img src="../img/圓形ＬＯＧＯ白底.png" alt="LAB4Logo" />
+      <h1><a class="active" href="../index.html">LAB4舞蹈工作室</a></h1>
+    </section>
+    <nav>
+      <ul>
+        <li>
+          <a href="../品牌故事/brand.html"><i class="fa-solid fa-store"></i> 品牌故事</a>
+        </li>
+        <li>
+          <a href="../最新消息/news.html"><i class="fa-regular fa-file"></i> 最新消息</a>
+        </li>
+        <li>
+          <a href="../index.html"><i class="fa-sharp fa-regular fa-gem"></i> 師資介紹</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-sharp fa-solid fa-book"></i> 課程資訊</a>
+        </li>
+        <li>
+          <a href="../場館導覽/place.html"><i class="fa-brands fa-squarespace"></i> 場館導覽</a>
+        </li>
+        <!-- <li>
+            <a href="../會員登入/member.html"
+              ><i class="fa-sharp fa-solid fa-person fa-lg"></i> 會員登入</a
+            >
+          </li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="main">
+      <div id="row1"></div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="../img/圓形LOGO(去背無字).png" alt="LAB4Logo" />
+
+    <section class="footer-logo">
+      <!--<h3>LAB4街舞休閒館</h3>-->
+    </section>
+
+    <div class="link">
+      <a href=""><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-square-youtube fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-line fa-2xl" style="color: #ababab"></i></a>
+    </div>
+
+    <hr />
+
+    <div class="footer-info">
+      <p>| 營業時間：週一至週五 1pm - 10pm & 週六、週日 10am - 18pm |</p>
+      <p>| TEL：05-2765496 |　| E-mail：labfour4@gmail.com |</p>
+      <p>| ADD：600011嘉義市東區維新路72號2F |</p>
+      <p>
+        | 2F, No. 72, Weixin Rd., East Dist., Chiayi City 600011, Taiwan
+        (R.O.C.) |
+      </p>
+      <p>Copyright © 2018-2023 LAB4 Dance Studio</p>
+    </div>
+    <div class="arrowup">
+      <a href="#top"><i class="fa-solid fa-arrow-up fa-beat-fade fa-xl" style="color: #ababab">back</i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB4舞蹈工作室</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style/indexstyle.css" />
+  <!--ICON CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!--文字標題動畫-->
+<script>
+  setInterval(function () {
+    let top = document.querySelector("section.background-img");
+
+    if (top.style.backgroundImage == 'url("../img/lab 3.jpg")') {
+      top.style.backgroundImage = 'url("../img/lab6.jpg")';
+    } else if (top.style.backgroundImage == 'url("../img/lab6.jpg")') {
+      top.style.backgroundImage = 'url("../img/lab8.jpg")';
+    } else if (top.style.backgroundImage == 'url("../img/lab8.jpg")') {
+      top.style.backgroundImage = 'url("../img/teach.jpg")';
+    } else {
+      top.style.backgroundImage = 'url("../img/lab 3.jpg")';
+    }
+  }, 2000);
+</script>
+
+<style>
+  .ml10 {
+    position: relative;
+    font-weight: 900;
+    font-size: 4em;
+  }
+
+  .ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+
+  .ml10 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+    color: azure;
+    font-size: 4.5rem;
+  }
+
+  .letters:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+  .letters:hover:after {
+    width: 100%;
+    background: #fff;
+  }
+</style>
+<!-- ---------------------------文字標題動畫script---------------------------------------- -->
+<script>
+  window.onload = function () {
+    // Wrap every letter in a span
+    let textWrapper = document.querySelector(".ml10 .letters");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime
+      .timeline({ loop: true })
+      .add({
+        targets: ".ml10 .letter",
+        rotateY: [-90, 0],
+        duration: 1300,
+        delay: (el, i) => 45 * i,
+      })
+      .add({
+        targets: ".ml10",
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000,
+      });
+  };
+</script>
+<!-----------------------------文字標題動畫script------------------------------------------>
+<!-- ---------------------師資介紹建立的DIV點SCRIPT---------------------------------------- -->
+<script>
+  function setVideo(video) {
+    let x = document.querySelector("#popup1 video");
+
+    switch (video) {
+      case "tutting":
+        x.setAttribute("src", "./video/djohn.mp4");
+        break;
+
+      case "waving":
+        x.setAttribute("src", "./video/阿奇.mp4");
+        break;
+
+      case "momo":
+        x.setAttribute("src", "./video/MOMO.mp4");
+        break;
+
+      case "boogeddie":
+        x.setAttribute("src", "./video/DOU.mp4");
+        break;
+      case "lilv":
+        x.setAttribute("src", "./video/圓善.mp4");
+        break;
+    }
+    document.getElementById("popup1").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("popup1").style.display = "none";
+  }
+</script>
+
+<body>
+  <!-- ---------------------師資介紹建立的DIV點下跳影片SCRIPT---------------------------------------- -->
+
+  <div id="popup1" style="display: none" onclick="closePopup()">
+    <video class="vdo" src="" width="640" height="360" loop autoplay muted></video>
+  </div>
+
+  <!-- ---------------------師資介紹建立的DIV點下跳影片---------------------------------------- -->
+
+  <img class="fixed-img" src="./img/djohn.jpg" alt="lab4" />
+  <header>
+    <section class="logo">
+      <img src="./img/圓形ＬＯＧＯ白底.png" alt="LAB4Logo" />
+      <h1><a class="active" href="./index.html">LAB4舞蹈工作室</a></h1>
+    </section>
+    <nav>
+      <ul>
+        <li>
+          <a href="./品牌故事/brand.html"><i class="fa-solid fa-store"></i> 品牌故事</a>
+        </li>
+        <li>
+          <a href="./最新消息/news.html"><i class="fa-regular fa-file"></i> 最新消息</a>
+        </li>
+        <li>
+          <a href="#teacher-info"><i class="fa-sharp fa-regular fa-gem"></i> 師資介紹</a>
+        </li>
+        <li>
+          <a href="./課程資訊/course.html"><i class="fa-sharp fa-solid fa-book"></i> 課程資訊</a>
+        </li>
+        <li>
+          <a href="./場館導覽/place.html"><i class="fa-brands fa-squarespace"></i> 場館導覽</a>
+        </li>
+        <!-- <li>
+          <a href="./會員登入/member.html"><i class="fa-sharp fa-solid fa-person fa-lg"></i> 會員登入</a>
+        </li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="background-img">
+      <div class="filter"></div>
+
+      <!-- ---------------------------文字標題動畫HTML---------------------------------------- -->
+      <h1 class="ml10">
+        <span class="text-wrapper">
+          <span class="letters">LAB4 DANCE STUDIO</span>
+        </span>
+      </h1>
+
+      <!-- ---------------------------文字標題動畫HTML---------------------------------------- -->
+
+      <h3></h3>
+    </section>
+
+    <section class="teacher-info">
+      <h3 id="teacher-info">師資介紹</h3>
+      <div class="nav-circle">
+        <div class="circle" onclick="setVideo('waving')">
+          <img src="./img/師資照片/鎮宇.jpg" alt="JamYu" />
+          <p>Waving 電流風格</p>
+        </div>
+
+        <div class="circle" onclick="setVideo('lilv')">
+          <img src="./img/師資照片/小V老師.jpg" alt="Lil-V" />
+          <p>K-Pop 流行MV</p>
+        </div>
+
+        <div class="circle" onclick="setVideo('tutting')">
+          <img src="./img/師資照片/豆漿.jpg" alt="D-John" />
+          <p>Tutting 埃及手風格</p>
+        </div>
+
+        <div class="circle" onclick="setVideo('momo')">
+          <img src="./img/師資照片/毛毛1.jpg" alt="MoMo" />
+          <p>Locking 放克鎖舞</p>
+        </div>
+
+        <div class="circle" onclick="setVideo('boogeddie')">
+          <img src="./img/師資照片/浩軒.jpg" alt="BoogEddie" />
+          <p>Popping 震感舞</p>
+        </div>
+      </div>
+    </section>
+    <section class="follow-img">
+      <h3>可能是嘉義最強的POPPING街舞教室</h3>
+    </section>
+  </main>
+
+  <footer>
+    <img src="./img/圓形LOGO(去背無字).png" alt="LAB4Logo" />
+
+    <section class="footer-logo">
+      <!-- <h3>LAB4街舞休閒館</h3> -->
+    </section>
+
+    <div class="link">
+      <a href="https://www.facebook.com/LAB4FOUR/"><i class="fa-brands fa-square-facebook fa-2xl"
+          style="color: #ababab"></i></a>
+      <a href="https://instagram.com/labfour4?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram fa-2xl"
+          style="color: #ababab"></i></a>
+      <a href="https://www.youtube.com/@user-ce3nq7tw5f"><i class="fa-brands fa-square-youtube fa-2xl"
+          style="color: #ababab"></i></a>
+      <a href="https://line.me/ti/p/vXR6MdXQmZ"><i class="fa-brands fa-line fa-2xl" style="color: #ababab"></i></a>
+    </div>
+
+    <hr />
+
+    <div class="footer-info">
+      <p>| 營業時間：週一至週五 1pm - 10pm & 週六、週日 10am - 18pm |</p>
+      <p>| TEL：05-2765496 |　| E-mail：labfour4@gmail.com |</p>
+      <p>| ADD：600011嘉義市東區維新路72號2F |</p>
+      <p>
+        | 2F, No. 72, Weixin Rd., East Dist., Chiayi City 600011, Taiwan
+        (R.O.C.) |
+      </p>
+      <p>Copyright © 2018-2023 LAB4 Dance Studio</p>
+    </div>
+    <div class="arrowup">
+      <a href="#top"><i class="fa-solid fa-arrow-up fa-beat-fade fa-xl" style="color: #ababab">back</i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

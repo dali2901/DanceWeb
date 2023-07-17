@@ -1,0 +1,209 @@
+$themeColor: rgba(34, 34, 34, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  header {
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    section.logo {
+      // border: 5px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 2 1 400px;
+      align-items: center;
+      padding: 2rem;
+
+      a.active {
+        text-decoration: none;
+        color: azure;
+      }
+
+      h1 {
+        font-size: 2rem;
+        padding: 2.2rem;
+        color: azure;
+      }
+
+      img {
+        width: 4.2vw;
+        height: 4.2vw;
+      }
+    }
+
+    nav {
+      flex: 8 1 600px;
+      // border: 2px solid red;
+      margin-right: 2.5rem;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+        // padding: 1.2rem;
+      }
+
+      li {
+        a {
+          color: azure;
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: all 0.25s ease-in;
+          &:hover {
+            color: rgb(192, 192, 192);
+            border-bottom: 2.5px f rgb(192, 192, 192);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(19, 19, 19);
+    section#main {
+      // border: 5px solid red;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 2.5rem;
+
+      div.row1 {
+        display: flex;
+        margin-bottom: 1.2rem;
+
+        div.video1 {
+          border: 2.5px solid rgb(239, 236, 236);
+          border-radius: 8px;
+          margin-right: 2rem;
+        }
+        div.row1text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          // border: 5px solid rgb(230, 171, 9);
+          // border-radius: 15px;
+          color: azure;
+          p {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+          }
+          // text-align: center;
+        }
+      }
+      div.row2 {
+        display: flex;
+        margin-top: 1.2rem;
+        margin-right: 2rem;
+
+        div.video2 {
+          border: 2.5px solid rgb(239, 236, 236);
+          border-radius: 8px;
+          margin-left: 1.8rem;
+        }
+
+        div.row2text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          // border: 5px solid rgb(230, 171, 9);
+          // border-radius: 15px;
+          color: azure;
+          // text-align: center;
+          padding: 1.2rem;
+
+          p {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(254, 253, 253);
+    background-color: rgb(58, 58, 58);
+    z-index: 0;
+    position: relative;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      margin-bottom: 1.2rem;
+      position: absolute;
+      z-index: -1;
+    }
+
+    section.footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    div.link {
+      margin-top: 1.4rem;
+
+      a {
+        i {
+          margin: 0rem 1rem;
+          &:hover {
+            // border: 0.5px solid rgb(214, 214, 214);
+            transform: scale(1.3);
+            transition: transform 0.2s ease-in;
+          }
+        }
+      }
+    }
+
+    div.footer-info {
+      display: flex;
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin: 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    div.arrowup {
+      position: absolute;
+      right: 2vw;
+      bottom: 1.5vw;
+    }
+  }
+}

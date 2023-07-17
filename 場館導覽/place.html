@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAB4舞蹈工作室</title>
+  <!--連接CSS樣式表-->
+  <link rel="stylesheet" href="./place.css" />
+  <!--ICON CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+
+  <!--googlemap金鑰-->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvy_9nGFBP_RgQ3qQGaAbue2PHcM9gpvs&callback=initMap&v=beta&libraries=marker"
+    defer></script>
+</head>
+
+<script>
+  // $(function(){
+
+  //   $('#button1').click(function(){
+  //     let x = document.getElementById("photo");
+  //     let top = x.src;
+  //     // console.log(top);
+  //     if (top_picture == 'url("./img/教室內1.jpg")') {
+  //       top_picture = 'url("./img/教室內2.jpg")';
+  //     } else {
+  //       top_picture.img = 'url("./img/教室1.jpg")';
+  //     }
+  //   })
+  // 豆漿方法})
+
+  $(function () {
+    let x = 0;
+    $("#button1").click(function () {
+      let img = document.getElementById("photo");
+      x++;
+      if (x == 1) {
+        img.src = "./img/教室內2.jpg";
+      } else if (x == 2) {
+        img.src = "./img/教室外.jpg";
+      } else if (x == 3) {
+        img.src = "./img/教室外2.jpg";
+      } else {
+        x = 0;
+        img.src = "./img/教室內1.jpg";
+      }
+
+      // 漾方法
+    });
+  });
+
+  // ------------------------以下為GOOGLEMAP插入--------------------
+  function initMap() {
+    const taiwan = { lat: 23.975126479012527, lng: 120.9795655805013 };
+    const map = new google.maps.Map($('#googlemap').get(0), {
+      zoom: 15,
+      center: { lat: 23.48225052608229, lng: 120.45904955860557 },
+      mapId: '9d6cd6ae4d149820'
+    });
+
+    const pinViewScaled = new google.maps.marker.PinView({
+      scale: 0.8,
+      // glyph: record.aqi,
+      // background: getColor(record.aqi)
+    });
+
+
+    const marker = new google.maps.marker.AdvancedMarkerView({
+      position: { lat: 23.48225052608229, lng: 120.45904955860557 },
+      map: map,
+      title: 'LAB4舞蹈教室',
+      // label: record.aqi
+      content: pinViewScaled.element,
+    });
+
+  }
+  window.initMap = initMap;
+  // let x = document.getElementById('googlemap');
+  // x.innerHTML = window.initMap;
+
+
+  window.onload = function () {
+
+    // $('#map_link').click(function () {
+    //   $('#googlemap').css('display', 'block');
+
+    // });
+
+    // function showmap() {
+    // }
+    // ------------------------以上是漾方法----------------
+
+
+
+  }
+
+
+  function openPopup() {
+    document.getElementById("googlemap-div").style.display = "block";
+  }
+  function closePopup() {
+    document.getElementById("googlemap-div").style.display = "none";
+
+  }
+
+    // ------------------------以上傑森李方法----------------
+
+
+</script>
+
+<body>
+  <div id="googlemap-div" style="display: none;" onclick="closePopup()">
+    <div id="googlemap"></div>
+  </div>
+
+
+  <header>
+    <section class="logo">
+      <img src="../img/圓形ＬＯＧＯ白底.png" alt="LAB4Logo" />
+      <h1><a class="active" href="../index.html">LAB4舞蹈工作室</a></h1>
+    </section>
+    <nav>
+      <ul>
+        <li>
+          <a href="../品牌故事/brand.html"><i class="fa-solid fa-store"></i> 品牌故事</a>
+        </li>
+        <li>
+          <a href="../最新消息/news.html"><i class="fa-regular fa-file"></i> 最新消息</a>
+        </li>
+        <li>
+          <a href="../index.html"><i class="fa-sharp fa-regular fa-gem"></i> 師資介紹</a>
+        </li>
+        <li>
+          <a href="../課程資訊/course.html"><i class="fa-sharp fa-solid fa-book"></i> 課程資訊</a>
+        </li>
+        <li>
+          <a href="../場館導覽/place.html"><i class="fa-brands fa-squarespace"></i> 場館導覽</a>
+        </li>
+        <!-- <li>
+          <a href="../會員登入/member.html"><i class="fa-sharp fa-solid fa-person fa-lg"></i> 會員登入</a>
+        </li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="main">
+      <p id="button1">
+        <i class="fa-solid fa-circle-chevron-right fa-beat-fade fa-2xl" style="color: #e3e3e3">
+          N e x t</i>
+      </p>
+      <div class="row1">
+        <img id="photo" src="./img/教室內1.jpg" alt="" /><br />
+      </div>
+      <div class="info">
+        <ul>
+          <li class="text">
+            教室位於中山路與維新路轉角，鄰近BRT站
+          </li>
+          <li class="text">
+            近35坪寬敞空間，可容納25-30人進行舞蹈、運動、有氧、健身等課程
+          </li>
+          <li class="text">
+            優質黑膠地墊，堅韌耐磨無需顧慮
+          </li>
+          <li class="text">
+            備有淋浴間、更衣室、室外沙發躺椅、讀書空間
+          </li>
+          <li class="text">
+            場館租借以小時計費，歡迎洽詢
+          </li>
+        </ul>
+      </div>
+      <div id="map_link" onclick="openPopup()"> <i class="fa-solid fa-map-pin fa-fade fa-lg"
+          style="color: #d9d9d9;"></i> 詳細位置</div>
+
+    </section>
+
+
+
+  </main>
+
+  <footer>
+    <img src="../img/圓形LOGO(去背無字).png" alt="LAB4Logo" />
+
+    <section class="footer-logo">
+      <!-- <h3>LAB4街舞休閒館</h3> -->
+    </section>
+
+    <div class="link">
+      <a href=""><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-square-youtube fa-2xl" style="color: #ababab"></i></a>
+      <a href=""><i class="fa-brands fa-line fa-2xl" style="color: #ababab"></i></a>
+    </div>
+
+    <hr />
+
+    <div class="footer-info">
+      <p>| 營業時間：週一至週五 1pm - 10pm & 週六、週日 10am - 18pm |</p>
+      <p>| TEL：05-2765496 |　| E-mail：labfour4@gmail.com |</p>
+      <p>| ADD：600011嘉義市東區維新路72號2F |</p>
+      <p>
+        | 2F, No. 72, Weixin Rd., East Dist., Chiayi City 600011, Taiwan
+        (R.O.C.) |
+      </p>
+      <p>Copyright © 2018-2023 LAB4 Dance Studio</p>
+    </div>
+    <div class="arrowup">
+      <a href="#top"><i class="fa-solid fa-arrow-up fa-beat-fade fa-xl" style="color: #ababab">back</i></a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+{
+
+    "course_type":[ 
+        
+        {
+        "photo":"Json_img/浩軒.jpg " ,  
+        "name":"BoogEddie老師",
+        "type":"Popping機械舞",
+        "time":"Wed.18:00-19:00",
+        "tuition":"4堂2800"
+        },
+
+
+        {
+        "photo":" Json_img/小V老師.jpg",    
+        "name":"小V老師",
+        "type":"K-Pop流行MV",
+        "time":"Tue.18:00-19:00",
+        "tuition":"4堂3200"
+        },
+
+
+        {
+        "photo":"Json_img/鎮宇.jpg " ,   
+        "name":"Achi老師",
+        "type":"Waving電流風格",
+        "time":"Mon.20:00-21:30",
+        "tuition":"4堂3600"
+        },
+
+
+        {
+        "photo":"Json_img/毛毛1.jpg " ,   
+        "name":"MoMo老師",
+        "type":"Locking放克鎖舞",
+        "time":"Wed.19:00-20:00",
+        "tuition":"4堂3200"
+        },
+
+
+        {
+        "photo":"Json_img/豆漿.jpg" ,   
+        "name":"豆漿老師",
+        "type":"Tutting埃及手風格",
+        "time":"Fri.18:00-19:00",
+        "tuition":"4堂3200"
+        }
+     ],
+
+
+    "members":[ 
+
+       
+        {
+            "class":"9堂",
+            "tuition":"2700$",
+            "deadline":"3個月",
+            "people":"一人使用"
+        },
+
+        {
+            "class":"18堂",
+            "tuition":"5000$",
+            "deadline":"6個月",
+            "people":"二人使用"
+        },
+
+        {
+            "class":"30堂",
+            "tuition":"7500$",
+            "deadline":"9個月",
+            "people":"三人使用"
+        }
+    
+     ],
+
+     "non_members":[ 
+
+       
+     {
+         "class":"9堂",
+         "tuition":"3400$",
+         "deadline":"3個月",
+         "people":"一人使用"
+     },
+
+     {
+         "class":"18堂",
+         "tuition":"6400$",
+         "deadline":"6個月",
+         "people":"二人使用"
+     },
+
+     {
+         "class":"30堂",
+         "tuition":"9400$",
+         "deadline":"9個月",
+         "people":"三人使用"
+     }
+     ]
+
+
+}

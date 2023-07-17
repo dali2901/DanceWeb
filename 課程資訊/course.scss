@@ -1,0 +1,240 @@
+$themeColor: rgba(34, 34, 34, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  header {
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    section.logo {
+      // border: 5px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 2 1 400px;
+      align-items: center;
+      padding: 2rem;
+
+      a.active {
+        text-decoration: none;
+        color: azure;
+      }
+
+      h1 {
+        font-size: 2rem;
+        padding: 2.2rem;
+        color: azure;
+      }
+
+      img {
+        width: 4.2vw;
+        height: 4.2vw;
+      }
+    }
+
+    nav {
+      flex: 8 1 600px;
+      // border: 2px solid red;
+      margin-right: 2.5rem;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-evenly;
+        // padding: 1.2rem;
+      }
+
+      li {
+        a {
+          color: azure;
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: all 0.25s ease-in;
+
+          &:hover {
+            color: rgb(192, 192, 192);
+            border-bottom: 2.5px f rgb(192, 192, 192);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(19, 19, 19);
+
+    section#main {
+      // border: 5px solid red;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      div#row1 {
+        display: flex;
+        flex-wrap: wrap;
+        // border: 5px solid greenyellow;
+        justify-content: space-evenly;
+
+        div.table {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          // background-color: azure;
+          padding: 1.2rem;
+          margin: 5rem;
+          border: 5.5px solid azure;
+          border-radius: 10px;
+          overflow: hidden;
+
+          &:hover {
+            box-shadow:
+              rgba(rgb(251, 249, 249), 0.2) 0 0 40px 5px,
+              rgba(white, 1) 0 0 0 5px,
+              rgba(rgb(235, 231, 231), 0.66) 0 30px 60px 0,
+              inset #333 0 0 0 5px,
+              inset white 0 0 0 6px;
+
+
+
+          }
+        }
+
+        div {
+          // border: 3px solid red;
+          display: flex;
+          justify-content: center;
+        }
+
+        img {
+          width: 18vw;
+          height: 18vw;
+          justify-content: center;
+          border-radius: 10px;
+          overflow: hidden;
+          border: 5px solid azure;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        ul {
+          position: relative;
+          bottom: 0.6rem;
+
+          li {
+            list-style-type: none;
+            text-align: center;
+            // border: 3px solid green;
+            color: rgb(255, 255, 255);
+            margin-top: 0.4rem;
+          }
+        }
+
+        p {
+          // border: 3px solid rgb(2, 2, 2);
+          text-align: center;
+          font-size: 2rem;
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      // div.course {
+      //   color: rgb(7, 7, 7);
+      //   border: 5px solid orange;
+      //   background-color: azure;
+      // }
+    }
+
+    /*----------------------------------------------*/
+    // div.row2 {
+    //   display: flex;
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   border: 5px solid greenyellow;
+    //   justify-content: center;
+
+    // div.course {
+    //   color:black;
+    //   border: 5px solid orange;
+    //   background-color: azure;
+    // }
+  }
+
+  footer {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(254, 253, 253);
+    background-color: rgb(58, 58, 58);
+    z-index: 0;
+    position: relative;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      margin-bottom: 1.2rem;
+      position: absolute;
+      z-index: -1;
+    }
+
+    section.footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    div.link {
+      margin-top: 1.4rem;
+
+      a {
+        i {
+          margin: 0rem 1rem;
+        }
+      }
+    }
+
+    div.footer-info {
+      display: flex;
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin: 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    div.arrowup {
+      position: absolute;
+      right: 2vw;
+      bottom: 1.5vw;
+    }
+  }
+}
